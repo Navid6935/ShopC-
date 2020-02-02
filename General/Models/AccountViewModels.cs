@@ -64,6 +64,9 @@ namespace General.Models
 
     public class RegisterViewModel
     {
+        [Key]
+        [Display(Name = "نام کاربری")]
+        public string UserName { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
