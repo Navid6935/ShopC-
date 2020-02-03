@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -24,7 +25,9 @@ namespace General.Area.Product.Models
         }
         #endregion
         #region Props
+        [Key]
         public int PId { get; set; }
+
         public string Name { get; set; }
         #endregion
         #region Relation
