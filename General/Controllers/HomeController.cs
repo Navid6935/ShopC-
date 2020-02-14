@@ -15,14 +15,14 @@ namespace General.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "اطلاعات درباره نرم افزار.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "اطلاعات تماس";
 
             return View();
         }
