@@ -17,14 +17,16 @@ namespace General.Models
             return userIdentity;
         }
     }
-
+    //کلاس مربوط به مایگریشن
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //سازنده  که از بیس یکسری اطلاعات را می گیرد
+        //که تمامی سناریو را پیاده سازی می کند 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
+        //دیتابیس را می سازد
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
@@ -33,5 +35,11 @@ namespace General.Models
         {
             System.Data.Entity.Database.SetInitializer(new System.Data.Entity.MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>());
         }
+
+        public System.Data.Entity.DbSet<General.Models.Personel> Personels { get; set; }
+
+        public System.Data.Entity.DbSet<General.Models.Utilities.Mounth> Mounths { get; set; }
+
+        public System.Data.Entity.DbSet<General.Models.Utilities.Year> Years { get; set; }
     }
 }

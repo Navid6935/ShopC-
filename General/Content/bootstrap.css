@@ -49,6 +49,7 @@ html {
 body {
     font-family: 'IRANSansWebFaNum_Light','Times New Roman';
     margin: 0;
+    direction:rtl;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -5630,7 +5631,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
     .navbar-left {
-        float: left !important;
+        float: right !important;
     }
 
     .navbar-right {
@@ -9435,7 +9436,7 @@ button.bg-dark:focus {
 }
 
 .float-left {
-    float: left !important;
+    float: right !important;
 }
 
 .float-right {
@@ -9448,7 +9449,7 @@ button.bg-dark:focus {
 
 @media (min-width: 576px) {
     .float-sm-left {
-        float: left !important;
+        float: right !important;
     }
 
     .float-sm-right {
