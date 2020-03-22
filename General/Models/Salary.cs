@@ -9,6 +9,26 @@ namespace General.Models
 {
     public class Salary
     {
+        #region Configuration
+        internal class Configuration:System.Data.Entity.ModelConfiguration.EntityTypeConfiguration<Salary>
+        {
+            public Configuration()
+            {
+                HasRequired(current => current.Personel)
+                    .WithMany(pid => pid.Salaries)
+                    .HasForeignKey(current => current.PersonelID)
+                    .WillCascadeOnDelete(false);
+                HasRequired(current => current.BaseSalary)
+                    .WithMany(BSId => BSId.Salaries)
+                    .HasForeignKey(current => current.BaseSalaryID)
+                    .WillCascadeOnDelete(false);
+                HasRequired(current => current.Mounth)
+                .WithMany(MId => MId.Salaries)
+                .HasForeignKey(current => current.MounthID)
+                .WillCascadeOnDelete(false);
+            }
+        }
+        #endregion
         #region CTOR
         //سازنده پیش فرض
         public Salary()
@@ -142,7 +162,7 @@ namespace General.Models
         {
             get
             {
-                double? dblResult = ((BaseSalary.RestSalary -(RestDay*237474)-(237474/8*RestTime));
+                double? dblResult = (BaseSalary.RestSalary -(RestDay*237474)-(237474/8*RestTime));
                 return dblResult;
             }
         }
@@ -223,8 +243,21 @@ namespace General.Models
         {
             get
             {
-                double? dblResult = (Porsant  + Giftsalary + BaseSalary.BonSalary + CalcNavSalary + RewardSalary
-                    + BaseSalary.HomeSalary + CalcBaseSalary + CalcEzafeKar1);
+                double? dblResult = (Porsant  + Giftsalary + BaseSalary.BonSalary + CalcNavSalary + RewardSalary 
+                    + CalcMMorakhasi1 + BaseSalary.HomeSalary + CalcBaseSalary + CalcEzafeKar1);
+                return dblResult;
+            }
+        }
+        /// <summary>
+        /// محاسبه قابل پرداخت
+        /// </summary>
+        [DisplayFormat(ApplyFormatInEditMode = false, DataFormatString = "{0:#,##0 ريال}")]
+        [DisplayName("قابل پرداخت")]
+        public double? CalcRealPeyments
+        {
+            get
+            {
+                double? dblResult = (CalcPayments - CalcKosorat);
                 return dblResult;
             }
         }

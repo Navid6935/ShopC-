@@ -16,6 +16,10 @@ namespace General.Models.Utilities
         #region Props
         public int ID { get; set; }
         public string Mounths { get; set; }
+        /// <summary>
+        /// ارتباط یک به چند با جدول حقوق
+        /// </summary>
+        public virtual System.Collections.Generic.IList<Salary> Salaries { get; set; }
         #endregion
     }
 }

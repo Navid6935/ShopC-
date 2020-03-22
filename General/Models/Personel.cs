@@ -44,7 +44,11 @@ namespace General.Models
         public string Mobile { get; set; }
 
         public string BankID { get; set; }
+        /// <summary>
+        /// ارتباط یک به یک با جدول حقوق
+        /// </summary>
 
+        public virtual System.Collections.Generic.IList<Salary> Salaries { get; set; }
         #endregion
 
     }
