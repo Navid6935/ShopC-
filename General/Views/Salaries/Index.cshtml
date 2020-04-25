@@ -1,0 +1,136 @@
+﻿@model IEnumerable<General.Models.Salary>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseSalary.LevelPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mounth.Mounths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Personel.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EzafeKar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActiveWorkDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Giftsalary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RewardSalary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Porsant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RestDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HelpSalary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PenaltySalary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaftehPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaftehBedehi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bedehi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PBon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseSalary.LevelPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mounth.Mounths)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personel.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EzafeKar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActiveWorkDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Giftsalary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RewardSalary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Porsant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RestDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HelpSalary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PenaltySalary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaftehPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaftehBedehi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bedehi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PBon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

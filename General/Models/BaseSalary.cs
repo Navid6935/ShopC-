@@ -19,19 +19,19 @@ namespace General.Models
         #region Props
         [Key]
         public int ID { get; set; }
+        [DisplayName("سال")]
         public int YearID { get; set; }
         /// <summary>
         /// ارتباط یک به چند با جدول سال
         /// </summary>
-        [Required(ErrorMessage = "سال را وارد نمایید")]
         [DisplayName("سال")]
         public virtual Models.Utilities.Year Year { get; set; }
-        public int SalaryID { get; set; }
+  
         /// <summary>
         /// ارتباط یک به یک با جدول حقوق
         /// </summary>
 
-        public virtual System.Collections.Generic.IList<Salary> Salaries { get; set; }
+        public virtual System.Collections.Generic.IList<Salary> Salaries { get; set; }  
         [Required(ErrorMessage ="پایه حقوق یک روز را وارد نمایید")]
         [DisplayName("پایه حقوق یک روز")]
         [DisplayFormat(ApplyFormatInEditMode =false,DataFormatString ="{0:#,##0 ريال}")]

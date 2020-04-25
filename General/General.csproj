@@ -191,10 +191,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Area\Product\Models\Products.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseSalariesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MounthsController.cs" />
     <Compile Include="Controllers\PersonelsController.cs" />
+    <Compile Include="Controllers\SalariesController.cs" />
     <Compile Include="Controllers\YearsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,6 +204,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseSalary.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Personel.cs" />
@@ -291,6 +294,16 @@
     <Content Include="Views\Years\Details.cshtml" />
     <Content Include="Views\Years\Edit.cshtml" />
     <Content Include="Views\Years\Index.cshtml" />
+    <Content Include="Views\Salaries\Create.cshtml" />
+    <Content Include="Views\Salaries\Delete.cshtml" />
+    <Content Include="Views\Salaries\Details.cshtml" />
+    <Content Include="Views\Salaries\Edit.cshtml" />
+    <Content Include="Views\Salaries\Index.cshtml" />
+    <Content Include="Views\BaseSalaries\Create.cshtml" />
+    <Content Include="Views\BaseSalaries\Delete.cshtml" />
+    <Content Include="Views\BaseSalaries\Details.cshtml" />
+    <Content Include="Views\BaseSalaries\Edit.cshtml" />
+    <Content Include="Views\BaseSalaries\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

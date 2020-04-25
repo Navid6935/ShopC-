@@ -41,5 +41,9 @@ namespace General.Models
         public System.Data.Entity.DbSet<General.Models.Utilities.Mounth> Mounths { get; set; }
 
         public System.Data.Entity.DbSet<General.Models.Utilities.Year> Years { get; set; }
+
+        public System.Data.Entity.DbSet<General.Models.BaseSalary> BaseSalaries { get; set; }
+
+        public System.Data.Entity.DbSet<General.Models.Salary> Salaries { get; set; }
     }
 }
