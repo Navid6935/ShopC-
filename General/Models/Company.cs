@@ -35,5 +35,8 @@ namespace General.Models
             [DisplayName("نام و فعالیت شرکت")]
         public string DisplayName { get { string strResult = string.Format("{0}-{1}-{2}", Id, Title, Category);return strResult; } }
         #endregion
+        #region Relations
+        public virtual IList<Contact> Contact { get; set; }
+        #endregion
     }
 }

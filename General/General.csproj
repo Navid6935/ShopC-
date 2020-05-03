@@ -205,9 +205,14 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseSalary.cs" />
     <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Personel.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\Salary.cs" />
     <Compile Include="Models\Utilities\Mounth.cs" />
     <Compile Include="Models\Utilities\Year.cs" />
@@ -224,6 +229,7 @@
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.jpg" />
     <Content Include="Images\3.jpg" />
+    <Content Include="Models\Utilities\Regions.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

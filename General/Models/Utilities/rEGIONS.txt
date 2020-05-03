@@ -1,0 +1,12 @@
+﻿        #region Ctors
+
+        #endregion
+        #region Props
+
+        #endregion
+        #region Relations
+
+        #endregion
+        #region Configurations
+
+        #endregion
